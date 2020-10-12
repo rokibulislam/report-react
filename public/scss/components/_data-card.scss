@@ -1,0 +1,326 @@
+/*------------- START Data cart styles -------------*/
+.data-cards-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.data-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 10px 0;
+
+  &__options {
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+
+    &.show,
+    .btn:hover {
+      svg rect {
+        fill: var(--primary-n);
+      }
+    }
+  }
+
+  &--xl {
+    width: 100%;
+    //width: 68.5%;
+    //max-width: 1025px;
+    @include lg {
+      width: 66%;
+    }
+    @include xl {
+      width: 60%;
+    }
+  }
+
+  &--md {
+    width: 100%;
+    //max-width: 500px;
+    @include sm {
+      width: 48.5%;
+    }
+    @include lg {
+      width: 31.83%;
+    }
+    @include xl {
+      width: 29%;
+    }
+  }
+
+  &--sm {
+    width: 100%;
+    //max-width: 310px;
+    @include sm {
+      width: 48.5%;
+    }
+    @include lg {
+      width: 31.83%;
+    }
+    @include xl {
+      width: 18.5%;
+    }
+  }
+
+  // data card child elements
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.002em;
+    text-transform: capitalize;
+  }
+
+  &__filter {
+    background: #FFFFFF;
+    border: 1px solid #F0F3F7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+
+    &:hover {
+      background: rgba(91, 118, 249, 0.04);
+      border: 1px solid transparent;
+    }
+  }
+
+  // date selector styles
+  &__filter-date {
+    background-color: var(--primary-n);
+    box-shadow: 0px 6px 20px rgba(43, 154, 156, 0.2);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary-n);
+      border-color: var(--primary-n);
+    }
+
+    select {
+      cursor: pointer;
+      border: none;
+      background-color: var(--primary-n);
+      border-radius: 5px;
+      width: 91px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      //line-height: 28px;
+      color: #fff;
+    }
+
+    select:before {
+      color: #fff;
+    }
+
+    .custom-select {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE3LDkuMTdhMSwxLDAsMCwwLTEuNDEsMEwxMiwxMi43MSw4LjQ2LDkuMTdhMSwxLDAsMCwwLTEuNDEsMCwxLDEsMCwwLDAsMCwxLjQybDQuMjQsNC4yNGExLDEsMCwwLDAsMS40MiwwTDE3LDEwLjU5QTEsMSwwLDAsMCwxNyw5LjE3WiIvPjwvc3ZnPg==");
+      background-size: 20px;
+    }
+  } // END date selector styles
+
+  &__filter--active {
+    background: rgba(91, 118, 249, 0.04);
+    border-color: transparent !important;
+  }
+}
+
+.color-dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 4px solid #fff;
+
+  &--blue {
+    background: #534FFF;
+    border: 4px solid #eae9ff;
+  }
+
+  &--orange {
+    background: #FDBF5A;
+    border: 4px solid #ffeed3;
+  }
+
+  &--green {
+    background: #33D067;
+    border: 4px solid #e2ffec;
+  }
+}
+
+.data-card__filter--active {
+  .card-filter-btn__label {
+    &--blue {
+      color: #534FFF;
+    }
+    &--orange {
+      color: #FDBF5A;
+    }
+    &--green {
+      color: #33D067;
+    }
+  }
+}
+
+// -------- START data-line-item
+.color-box {
+  height: 15px;
+  width: 15px;
+
+  &--blue {
+    background-color: #534FFF;
+  }
+  &--orange {
+    background-color: #FDBF5A;
+  }
+  &--green {
+    background-color: #33D067;
+  }
+}
+.data-line-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+
+  color: #2D2D2D;
+  padding: 10px 0;
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2D2D2D;
+    padding: 0 14px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 16px;
+    color: #999FBF;
+    margin-left: auto;
+  }
+}
+// -------- END data-line-item
+
+
+// -------- START sm info cards.
+.sm-info-card {
+  .num {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .foot {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .time-frame {
+    color: var(--light-text);
+  }
+
+  &--theme-blue {
+    .percent-num {
+      color: var(--theme-blue);
+    }
+    .theme-color {
+      fill: var(--theme-blue);
+    }
+  }
+  &--theme-lightblue {
+    .percent-num {
+      color: var(--theme-lightblue);
+    }
+    .theme-color {
+      fill: var(--theme-lightblue);
+    }
+  }
+
+  &--theme-green {
+    .percent-num {
+      color: var(--theme-green);
+    }
+    .theme-color {
+      fill: var(--theme-green);
+    }
+  }
+  &--theme-lightgreen {
+    .percent-num {
+      color: var(--theme-lightgreen);
+    }
+    .theme-color {
+      fill: var(--theme-lightgreen);
+    }
+  }
+
+  &--theme-teal {
+    .percent-num {
+      color: var(--theme-teal);
+    }
+    .theme-color {
+      fill: var(--theme-teal);
+    }
+  }
+  &--theme-lightteal {
+    .percent-num {
+      color: var(--theme-lightteal);
+    }
+    .theme-color {
+      fill: var(--theme-lightteal);
+    }
+  }
+}
+// -------- END sm info cards
+
+
+// -------- START data clients info
+.data-clients {
+  th,
+  td {
+    vertical-align: middle;
+    padding: 20px 5px;
+  }
+
+  .icon--image {
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 1;
+    font-size: 14px;
+
+    span {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .icon--image:hover {
+    background-color: #fff;
+    box-shadow: none;
+    //box-shadow: 0px 0px 20px 1px rgba(43, 154, 156, 0.2);
+    cursor: default;
+  }
+
+  &__img {}
+}
+// -------- END data clients info
+
+/*------------- END Data cart styles -------------*/

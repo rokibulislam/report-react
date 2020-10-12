@@ -1,0 +1,18 @@
+.dashboard-content {
+  width: calc(100% - 120px);
+  margin-left: 120px;
+  padding: 43px 50px;
+  height: auto;
+  min-height: 1000px;
+
+  .top-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include rwd(1650) {
+      justify-content: space-between;
+    }
+  }
+}

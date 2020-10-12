@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux'
+import Routes from './routes';
+import { store } from './store'
+
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+import common_en from "./locales/en/translation.json";
+import common_nor from "./locales/nor/translation.json";
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    resources: {
+      en: {
+        translation: common_en
+      },
+      nor: {
+        translation: common_nor
+      },
+    },
+    lng: "nor",
+    fallbackLng: "nor",
+
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={(<div>Loading</div>)}>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

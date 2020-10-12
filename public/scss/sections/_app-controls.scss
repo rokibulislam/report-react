@@ -1,0 +1,32 @@
+.app-controls {
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  .btn {
+    margin-right: 6px;
+    border-radius: 10px;
+
+    svg path {
+      transition: all .3s ease-in-out;
+    }
+
+    svg rect {
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--light-bg);
+
+      svg path {
+        stroke: var(--primary-n) !important;
+        fill: var(--primary-n) !important;
+      } // svg
+
+      svg rect {
+        //stroke: var(--primary-n) !important;
+        fill: var(--primary-n) !important;
+      } // svg
+    } // btn hover
+  }
+}

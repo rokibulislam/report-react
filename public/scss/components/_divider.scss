@@ -1,0 +1,18 @@
+.divider {
+  opacity: 0.3;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-n);
+  border-radius: 10px;
+
+  &--vertical {
+    width: 2px;
+    height: 18px;
+  }
+
+  &--full {
+    height: 1px;
+    background-color: #E0ECEB;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,32 @@
+.page-dashboard,
+.page-superadmin {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 120px;
+    height: 100vh;
+    min-height: 750px;
+    padding: 40px 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    //align-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: #FFFFFF;
+    box-shadow: 0px -10px 30px rgba(188, 196, 208, 0.04);
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+
+    .icon {
+      margin: 20px 0;
+    }
+  }
+}

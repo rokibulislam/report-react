@@ -1,0 +1,42 @@
+.user-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  @include rwd(1540) {
+    margin-top: 0;
+  }
+
+  .new-activity {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .has-notification {
+    .new-activity {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    margin-right: 6px;
+    border-radius: 10px;
+
+    svg path {
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--light-bg);
+
+      svg path {
+        stroke: var(--primary-n) !important;
+        //fill: var(--primary-n) !important;
+      } // svg
+    } // btn hover
+  }
+}
+
+.user-name {
+  font-weight: 500;
+}

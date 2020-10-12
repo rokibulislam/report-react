@@ -1,0 +1,62 @@
+.triplex-main {
+    background: #2b9a9c;
+}
+.triplex-main,
+.triplex-signup-form-bg {
+    min-height: 100vh;
+    box-shadow: 0 6px 20px rgba(43, 154, 156, 0.06);
+}
+.triplex-signup-form-bg {
+    background: #fff;
+    border-radius: 0 40px 40px 0;
+    margin-left: -15px;
+    padding: 50px;
+    position: relative;
+}
+.sign-up-title {
+    align-items: center;
+    letter-spacing: -0.124898px;
+    color: #19233c;
+}
+.subtitle {
+    opacity: 0.9;
+}
+.form-level,
+.subtitle {
+    color: #2d2d2d;
+}
+.form-input {
+    border: 1px solid #e0eceb;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.link-color {
+    color: #2b9a9c;
+    text-decoration: underline;
+}
+.tplx-btn {
+    background: #2b9a9c;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(43, 154, 156, 0.4);
+    border-radius: 10px;
+    width: 400px;
+    height: 58px;
+}
+.login-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+}
+.account-bg {
+    height: 600px;
+    margin-left: 12%;
+    background: url("/images/api-add-account.png");
+    background-repeat: no-repeat;
+}
+.scroll-bg {
+    height: 20px;
+    margin: 0 0 0 35%;
+    background: url("/images/scroll-bg.png");
+    background-repeat: no-repeat;
+}

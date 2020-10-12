@@ -1,0 +1,91 @@
+/* ------ START icon styles ------ */
+.icon {
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 131, 123, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 6px 20px rgba(43, 154, 156, 0);
+
+  width: 50px;
+  height: 50px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  // svgs inside icon class
+  svg .hover-white {
+    fill: #999FBF;
+  }
+
+  &:hover,
+  &--active {
+    background: #2B9A9C;
+    box-shadow: 0px 6px 20px rgba(43, 154, 156, 0.4);
+
+    svg path {
+      fill: transparent;
+    }
+
+    svg .hover-white {
+      fill: #fff!important;
+    }
+  }
+
+  // sidebar logo
+  &--logo {
+    height: 60px;
+    width: 60px;
+
+    &:hover {
+      background: #fff;
+      box-shadow: none;
+    }
+  }
+
+  // footer logout
+  &--logout {
+    background: rgba(33, 131, 123, 0.1);
+    border: none;
+
+    svg .hover-white {
+      fill: none;
+    }
+
+    &:hover {
+      svg .hover-white {
+        stroke: #fff;
+        fill: none !important;
+      }
+    }
+  } // end logout
+
+  &--delete {
+    height: 35px;
+    width: 35px;
+
+    svg .hover-white {
+      fill: transparent;
+    }
+
+    &:hover {
+      svg .hover-white {
+        stroke: #fff;
+        fill: none !important;
+      }
+    }
+  }
+}
+
+.icon {
+  &--image {
+    padding: 8px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+/* ------ END icon styles ------ */

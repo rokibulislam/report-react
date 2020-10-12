@@ -1,0 +1,33 @@
+.data-table {
+  .table {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 30px;
+
+    th,td {
+      padding: 20px;
+    }
+
+    tbody th {
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    thead {
+      th { border: 0; }
+    }
+
+    td { font-size: 14px; }
+  }
+
+  .month-name {
+    opacity: 0;
+  }
+
+  [data-tid="first-table"] {
+    .month-name {
+      opacity: 1;
+    }
+  }
+}
