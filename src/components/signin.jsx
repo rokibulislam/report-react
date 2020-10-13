@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const SignIn = () => {
 
@@ -30,17 +31,18 @@ const SignIn = () => {
                     </div>
                 </div>
                 <div className="col-6">
-                    <a href="/dashboard" className="link-color">
+                    <Link to="/dashboard" className="link-color">
                     { t('Forgot Password') }?
-                    </a>
+                    </Link>
                 </div>
             </div>
+            
             <a href="/dashboard" className="mt-5 btn btn-lg tplx-btn w-100 d-flex justify-content-center align-items-center">
             { t('Sign In') }
             </a>
             <p className="login-text ml-5">
                 { t('Don’t have any account yet') }?
-                <a href="/signup" className="link-color"> { t('Sign Up') }</a>
+                <Link to="/register" className="link-color"> { t('Sign Up') }</Link>
             </p>
         </div>
     </div>

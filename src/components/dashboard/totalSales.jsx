@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from "react-i18next";
-
+import PieChart from './Pie'
 import Action from './action'
 
 const TotalSales = () => {
@@ -17,7 +17,8 @@ const TotalSales = () => {
             </div>
 
             <div className="data-card__body mt-4">
-                <canvas id="myChart2" width="200" height="200"></canvas>
+                <PieChart/>
+                {/* <canvas id="myChart2" width="200" height="200"></canvas> */}
             </div>
 
             <div className="data-card__footer mt-3">

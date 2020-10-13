@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { useTranslation } from "react-i18next";
+import { Doughnut } from 'react-chartjs-2';
+import Chart from './Chart'
 import Action from './action'
 
 const Transaction = (props) => {
@@ -51,7 +53,8 @@ const Transaction = (props) => {
                 </div>
 
                 <div className="data-card__body mt-4">
-                    <canvas id="myChart" width="400" height="200"></canvas>
+                    <Chart/>
+                    {/* <canvas id="myChart" width="400" height="200"></canvas> */}
                 </div>
             </div>
         </div>

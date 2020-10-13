@@ -1,20 +1,20 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { connect } from 'react-redux';
-import { useTranslation } from "react-i18next";
 import Action from './action'
 import Item from './item'
 
+ 
+const Leverandorer = (props) => {
 
-const leverandorer = () => {
-    
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
     <React.Fragment>
         {/* single card */}
         <div className="data-card w-100 p-4 mt-4" id="card_6">
             <div className="data-card__header d-flex align-items-center justify-content-between">
-                <h5 className="data-card__title"> Top 10 Leverandorer </h5>
+                <h5 className="data-card__title"> { t('Top 10 Leverandorer') } </h5>
                 <Action/>
             </div>
 
@@ -74,4 +74,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
  
-export default connect(mapStateToProps, mapDispatchToProps)(leverandorer);
+export default connect(mapStateToProps, mapDispatchToProps)(Leverandorer);

@@ -15,19 +15,20 @@ import Cashflow from './pages/cashflow'
 import Customer from './pages/customer'
 import CustomerAdmin from './pages/customer-admin'
 
+import ProtectedRoute from "./components/common/protectedRoute";
 const Routes = () => {
     return ( 
         <Router>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/login" exact component={Login}/>
-                <Route path="/register" exact component={Register}/>
-                <Route path="/settings" exact component={Settings}/>
-                <Route path="/profit" exact component={Profit}/>
-                <Route path="/dashboard" exact component={Dashboard}/>
-                <Route path="/cashflow" exact component={Cashflow}/>
-                <Route path="/customer" exact component={Customer}/>
-                <Route path="/customer-admin" exact component={CustomerAdmin}/>
+                <Route path="/login"  component={Login}/>
+                <Route path="/register"  component={Register}/>
+                <ProtectedRoute path="/settings"  component={Settings}/>
+                <ProtectedRoute path="/profit"  component={Profit}/>
+                <ProtectedRoute path="/dashboard"  component={Dashboard}/>
+                <ProtectedRoute path="/cashflow"  component={Cashflow}/>
+                <ProtectedRoute path="/customer"  component={Customer}/>
+                <ProtectedRoute path="/customer-admin"  component={CustomerAdmin}/>
             </Switch>
         </Router>
     );

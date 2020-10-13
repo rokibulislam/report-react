@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
     
@@ -46,15 +47,15 @@ const Signup = () => {
                         <input id="exampleCheck1" type="checkbox" className="form-check-input" />
                         <label for="exampleCheck1" className="form-check-label">
                             { t('By creating an account you agree to the') }
-                            <a href="#" className="link-color">  { t('terms of us') } </a> 
+                            <Link to="#" className="link-color">  { t('terms of us') } </Link> 
                             { t('and our') }
-                            <a href="#" className="link-color"> { t('privacy policy')}.</a>
+                            <Link to="#" className="link-color"> { t('privacy policy')}.</Link>
                         </label>
                     </div>
                     <button className="mt-5 btn btn-lg tplx-btn"> { t('Create Account') } </button>
                     <p className="login-text ml-5">
                         { t('Already have an account?Account') }
-                        <a href="/login" className="link-color"> { t('Log In') } </a>
+                        <Link to="/login" className="link-color"> { t('Log In') } </Link>
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/sidebar'
 import Topbar from '../components/topbar'
-import Language from '../components/language'
+import Language from '../components/common/language'
 
 
 const Layout = (props) => {

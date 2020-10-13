@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { useTranslation } from "react-i18next";
 
 import Action from '../components/dashboard/action'
-import DateRangePicker from '../components/daterangePicker'
+import DateRangePicker from '../components/common/daterangePicker'
 import InvestmentActivity from '../components/cashflow/investmentActivity'
 import OperationalActivity from '../components/cashflow/operationalActivity'
 

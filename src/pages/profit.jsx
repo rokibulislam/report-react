@@ -4,7 +4,7 @@ import SalesRevenue from '../components/lossprofit/salesRevenue'
 import OperationRevenue from '../components/lossprofit/operationRevenue'
 import { connect } from 'react-redux'
 import { useTranslation } from "react-i18next";
-import DateRangePicker from '../components/daterangePicker'
+import DateRangePicker from '../components/common/daterangePicker'
 
 const Profit = () => {
 
