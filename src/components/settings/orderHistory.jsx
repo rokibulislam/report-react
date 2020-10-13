@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom'
 
 const OrderHistory = () => {
 
@@ -11,7 +12,7 @@ const OrderHistory = () => {
             <div className="card card--order-history">
                 <h5 className="card-title mb-3"> { t('Order history') } </h5>
                 <div className="input-group" id="search-order-history">
-                    <input type="text" className="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-order-history2"/>
+                    <input type="text" className="form-control" placeholder={ t('Search')} aria-label="Search" aria-describedby="search-order-history2"/>
                     <div className="input-group-append">
                         <span className="input-group-text bg-transparent border-0" id="search-order-history2">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,7 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const CustomerDetails = () => {
+
+    const { t } = useTranslation();
     return ( 
         <React.Fragment>
             <div className="card table-content-selected">
@@ -25,31 +28,31 @@ const CustomerDetails = () => {
                 </div>
 
                 <div className="customer__details mt-5">
-                    <h4 className="card-title">Customers Details</h4>
+                    <h4 className="card-title"> { t('Customers Details') } </h4>
 
                     <div className="table-responsive">
                         <table className="table">
                             <thead className="border-0">
                             <tr className="font-weight-bold">
-                                <th scope="col">Name</th>
-                                <th scope="col">info</th>
+                                <th scope="col"> { t('Name') } </th>
+                                <th scope="col"> { t('info') } </th>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Current plan</td>
-                                    <td className="color-green">Basic</td>
+                                    <td> { t('Current plan') } </td>
+                                    <td className="color-green"> { t('Basic') } </td>
                                 </tr>
                                 <tr>
-                                    <td>API accounts</td>
+                                    <td> { t('API accounts') } </td>
                                     <td>10</td>
                                 </tr>
                                 <tr>
-                                    <td>Monthly cost</td>
+                                    <td> { t('Monthly cost') } </td>
                                     <td>$30</td>
                                 </tr>
                                 <tr>
-                                    <td>Total const</td>
+                                    <td> { t('Total const') } </td>
                                     <td>$3000</td>
                                 </tr>
                             </tbody>

@@ -31,7 +31,7 @@ const CreditCard = () => {
                             </div>
                             <div className="card-details mb-3"> { t('Ending in 4039 | Expires 5/2022 | Postal / ZIP code: 2207') }</div>
                             <div className="cta">
-                                <button className="btn btn-outline-primary w-auto" type="button"> { t('Remove this card.') } </button>
+                                <button className="btn btn-outline-primary w-auto" type="button"> { t('Remove this card') }. </button>
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@ const CreditCard = () => {
                             </div>
                             <div className="card-details mb-3"> { t('Ending in 4039 | Expires 5/2022 | Postal / ZIP code: 2207') }</div>
                             <div className="cta">
-                                <button className="btn btn-outline-primary w-auto" type="button"> { t('Remove this card.') }</button>
+                                <button className="btn btn-outline-primary w-auto" type="button"> { t('Remove this card') }.</button>
                             </div>
                         </div>
                     </div>

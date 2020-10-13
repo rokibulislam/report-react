@@ -1,25 +1,28 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import Pagination from '../pagination'
 
 const CustomerList = () => {
+    const { t } = useTranslation();
     return ( 
         <React.Fragment>
             <div className="customer-info-table">
                 <div className="table-filter">
                     <div className="row">
                         <div className="col">
-                            <h4 className="card-title">Customers List</h4>
+                            <h4 className="card-title"> { t('Customers List') } </h4>
                         </div>
                         <div className="col d-flex justify-content-end">
                             <div className="searh-customer mr-2">
-                                <input type="search" className="form-control" placeholder="Search"/>
+                                <input type="search" className="form-control" placeholder={ t('Search') }/>
                             </div>
                             <div className="select-board filter-item mr-2">
                                 <select className="custom-select">
-                                    <option selected>Sort By</option>
-                                    <option value="1">Name</option>
-                                    <option value="2">Employee</option>
-                                    <option value="3">Transactions</option>
+                                    <option selected> { t('Sort By') } </option>
+                                    <option value="1"> { t('Name') } </option>
+                                    <option value="2"> { t('Employee') }</option>
+                                    <option value="3"> { t('Transactions') }</option>
                                 </select>
                             </div>
                             <div className="select-board filter-item">
@@ -40,9 +43,9 @@ const CustomerList = () => {
                         <table className="table">
                             <thead className="border-0">
                             <tr className="font-weight-bold">
-                                <th scope="col">Name</th>
-                                <th scope="col">Employees</th>
-                                <th scope="col">Paying/mo</th>
+                                <th scope="col"> { t('Name') } </th>
+                                <th scope="col"> { t('Employees') } </th>
+                                <th scope="col"> { t('Paying/mo') } </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,68 +70,13 @@ const CustomerList = () => {
                                         $15
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row" className="d-flex justify-content-start">
-                                        <div className="data-clients__img mr-3">
-                                            <div className="icon icon--image">
-                                                AG
-                                            </div>
-                                        </div>
-                                        <div className="data-clients__info">
-                                            <div className="data-clients__name">Abcd Group</div>
-                                            <div className="data-clients__address color-light">Oslo, Norway</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        10
-                                    </td>
-                                    <td>
-                                        $30
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row" className="d-flex justify-content-start">
-                                        <div className="data-clients__img mr-3">
-                                            <div className="icon icon--image">
-                                                AG
-                                            </div>
-                                        </div>
-                                        <div className="data-clients__info">
-                                            <div className="data-clients__name">Abcd Group</div>
-                                            <div className="data-clients__address color-light">Oslo, Norway</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        10
-                                    </td>
-                                    <td>
-                                        $30
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
                 <div className="table-pagination mt-4">
-                    <nav aria-label="...">
-                        <ul className="pagination">
-                            <li className="page-item disabled">
-                                <a className="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li className="page-item active">
-                                <a className="page-link" href="#">1 <span className="sr-only">(current)</span></a>
-                            </li>
-                            <li className="page-item">
-                                <a className="page-link" href="#">2</a>
-                            </li>
-                            <li className="page-item"><a className="page-link" href="#">3</a></li>
-                            <li className="page-item">
-                                <a className="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <Pagination/>
                 </div>
         </React.Fragment>
     );

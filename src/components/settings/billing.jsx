@@ -24,7 +24,7 @@ const Billing = () => {
                         </div>
                         
                         <div className="cta">
-                            <button className="btn btn-outline-primary w-auto" type="button"> { t('Cancel subscription.') } </button>
+                            <button className="btn btn-outline-primary w-auto" type="button"> { t('Cancel subscription') }. </button>
                         </div>
                     </div>
                     <CreditCard/>

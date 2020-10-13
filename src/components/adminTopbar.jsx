@@ -1,12 +1,16 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { connect } from 'react-redux';
 import TopbarMenu from './topbarMenu';
 
 const AdminTopbar = () => {
+
+    const { t } = useTranslation()
+
     return ( 
         <React.Fragment>
     <div class="top-bar">
-        <h3 class="card-title">Customers Information</h3>
+        <h3 class="card-title"> { t('Customers Information') } </h3>
 
         <div class="user-controls">
             <button class="btn btn-link has-notification">
