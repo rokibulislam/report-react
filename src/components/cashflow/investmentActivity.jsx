@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { useTranslation } from "react-i18next";
+import Table from '../common/table'
 
 const InvestmentActivity = () => {
 
@@ -8,17 +9,18 @@ const InvestmentActivity = () => {
 
     return (
         <React.Fragment>
-                <table className="table" data-tid="">
+            <Table/>
+                {/* <table className="table" data-tid="">
                     <thead className="thead-primary">
-                    <tr className="font-weight-bold">
-                        <th scope="col"> { t('Cash Flow From Operational Activities (Operations)') } </th>
-                        <th scope="col" className="month-name">Jan</th>
-                        <th scope="col" className="month-name">Feb</th>
-                        <th scope="col" className="month-name">Mar</th>
-                        <th scope="col" className="month-name">Apr</th>
-                        <th scope="col" className="month-name">May</th>
-                        <th scope="col" className="month-name">Jun</th>
-                    </tr>
+                        <tr className="font-weight-bold">
+                            <th scope="col"> { t('Cash Flow From Operational Activities (Operations)') } </th>
+                            <th scope="col" className="month-name">Jan</th>
+                            <th scope="col" className="month-name">Feb</th>
+                            <th scope="col" className="month-name">Mar</th>
+                            <th scope="col" className="month-name">Apr</th>
+                            <th scope="col" className="month-name">May</th>
+                            <th scope="col" className="month-name">Jun</th>
+                        </tr>
                     </thead>
                     <tbody>
                     <tr>
@@ -61,7 +63,7 @@ const InvestmentActivity = () => {
                             <td>301,262.93</td>
                         </tr>
                     </tfoot>
-                </table>
+                </table> */}
         </React.Fragment>
     );
 }

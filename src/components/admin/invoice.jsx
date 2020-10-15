@@ -6,12 +6,16 @@ const Invoice = () => {
     
     const { t } = useTranslation();
 
+    const handleSubmit = () => {
+        
+    }
+
     return ( 
         <React.Fragment>
             <div class="card table-content-selected">
                 <h4 class="card-title"> { t('Send Invoice to Your users') } </h4>
 
-                <form class="d-block w-100 mt-4">
+                <form class="d-block w-100 mt-4" onSubmit={handleSubmit}>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="company-name"> { t('Company Name') } </label>

@@ -34,4 +34,4 @@ const Item = (props) => {
     );
 }
  
-export default props;
+export default Item;

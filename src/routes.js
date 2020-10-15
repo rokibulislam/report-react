@@ -5,7 +5,6 @@ import {
     Route
   } from "react-router-dom";
   
-import Home from './pages/index'
 import Login from './pages/login'
 import Register from './pages/register'
 import Settings from './pages/settings'
@@ -20,9 +19,9 @@ const Routes = () => {
     return ( 
         <Router>
             <Switch>
-                <Route path="/" exact component={Home}/>
                 <Route path="/login"  component={Login}/>
                 <Route path="/register"  component={Register}/>
+                <ProtectedRoute path="/" exact component={Dashboard}/>
                 <ProtectedRoute path="/settings"  component={Settings}/>
                 <ProtectedRoute path="/profit"  component={Profit}/>
                 <ProtectedRoute path="/dashboard"  component={Dashboard}/>

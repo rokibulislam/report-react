@@ -1,10 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { Link, withRouter } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
+import { logout } from '../store/actions/authAction'
 
-const TopbarMenu = () => {
+const TopbarMenu = (props) => {
+
+    const { history, auth } = props;
 
     const { t } = useTranslation();
+
+    const logout = () => {
+        props.logout( history )
+    }
 
     return ( 
         <React.Fragment>
@@ -14,18 +22,24 @@ const TopbarMenu = () => {
                         <span className="user-img">
                             <img src="images/users/user-img.png" alt=""/>
                         </span>
-                        <span className="user-name pl-3">Torstien</span>
+                        <span className="user-name pl-3"> { auth.user.name } </span>
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <Link to="/settings" className="dropdown-item"> { t('Settings') } </Link>
                         <Link to="/" className="dropdown-item"> { t('Billing') } </Link>
                         <div className="dropdown-divider"></div>
-                        <Link to="/" className="dropdown-item"> { t('Logout') } </Link>
+                        <Link to="/" onClick={logout} className="dropdown-item"> { t('Logout') } </Link>
                     </div>
                 </div>
             </div>
         </React.Fragment>
     );
 }
+
+const mapStateToProps = state => ({
+    auth: state.auth
+})
  
-export default TopbarMenu;
+export default withRouter( connect(mapStateToProps, {
+    logout
+})(TopbarMenu) );

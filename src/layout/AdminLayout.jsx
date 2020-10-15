@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next'
-import AdminSidebar from '../components/adminSidebar'
-import AdminTopbar from '../components/adminTopbar'
+import AdminSidebar from '../components/admin/adminSidebar'
+import AdminTopbar from '../components/admin/adminTopbar'
 
 const AdminLayout = (props) => {
 

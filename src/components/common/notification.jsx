@@ -1,18 +1,8 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { connect } from 'react-redux';
-import TopbarMenu from './topbarMenu';
 
-const AdminTopbar = () => {
-
-    const { t } = useTranslation()
-
+const Notification = () => {
     return ( 
         <React.Fragment>
-    <div class="top-bar">
-        <h3 class="card-title"> { t('Customers Information') } </h3>
-
-        <div class="user-controls">
             <button class="btn btn-link has-notification">
                 <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.7499 16.5204C8.8798 16.5204 9.80425 15.6204 9.80425 14.5204H5.69556C5.69556 15.6204 6.60974 16.5204 7.7499 16.5204Z" stroke="#2D2D2D" stroke-width="1.5"/>
@@ -20,27 +10,8 @@ const AdminTopbar = () => {
                     <path class="new-activity" d="M17.9999 12.4285C17.9999 14.3759 16.3708 16 14.3043 16C12.2378 16 10.6086 14.3759 10.6086 12.4285C10.6086 10.4812 12.2378 8.85712 14.3043 8.85712C16.3708 8.85712 17.9999 10.4812 17.9999 12.4285Z" fill="#F64831" stroke="#F64831" stroke-width="2"/>
                 </svg>
             </button>
-
-            <div class="divider divider--vertical mx-3"></div>
-
-            <TopbarMenu/>
-
-        </div>
-    </div>
         </React.Fragment>
     );
 }
-
-const mapStateToProps = state => {
-    return {
-
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        
-    }
-}
  
-export default connect(mapStateToProps, mapDispatchToProps)(AdminTopbar);
+export default Notification;

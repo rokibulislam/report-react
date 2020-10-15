@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import ReactPaginate from 'react-paginate'
 
 const Pagination = () => {
+
+    const [ offset,setOffset ] = useState(0)
+
     const { t } = useTranslation();
+
+    const handlePageClick = (e) => {
+
+    }
+
     return ( 
     <React.Fragment>
+
+        {/* <ReactPaginate
+                previousLabel={"prev"}
+                nextLabel={"next"}
+                breakLabel={"..."}
+                breakClassName={"break-me"}
+                pageCount={this.state.pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={this.handlePageClick}
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"}/> */}
+
         <nav aria-label="...">
             <ul className="pagination">
                 <li className="page-item disabled">

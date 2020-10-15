@@ -1,17 +1,31 @@
+import * as Types from '../actions/type'
 const init = {
     isAuthenticated: false,
     user: {},
     error: {},
-    'count': 0
 }
 
 const authReducer = ( state= init, action ) => {
-    const newState = { ...state }
 
     switch( action.type ) {
+        
+        case Types.SET_USER: {
+            return {
+                user: action.payload.user,
+                isAuthenticated: Object.keys(action.payload.user).length !== 0,
+                error: {}
+            }
+        }
+
+        case Types.USERS_ERROR: {
+            return {
+                ...state,
+                error: action.payload.error
+            }
+        }
 
         default:
-            return newState;
+            return state;
     }
 }
 

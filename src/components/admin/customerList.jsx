@@ -5,6 +5,7 @@ import Pagination from '../common/pagination'
 
 const CustomerList = () => {
     const { t } = useTranslation();
+    
     return ( 
         <React.Fragment>
             <div className="customer-info-table">
