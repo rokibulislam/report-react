@@ -9,7 +9,7 @@ export const register = (user, history) => dispatch => {
     .then( (response) => {
         let token = response.data.jwtToken;
         localStorage.setItem('auth_token',token);
-        http.setAuthToken(token);
+        // http.setAuthToken(token);
         let decode = jwtDecode(token)
         dispatch({
             type: Types.SET_USER,
@@ -38,7 +38,7 @@ export const login = (user, history) => dispatch => {
     .then(function (response) {
         let token = response.data.jwtToken;
         localStorage.setItem('auth_token',token);
-        http.setAuthToken(token)
+        // http.setAuthToken(token)
         let decode = jwtDecode(token)
         dispatch({
             type: Types.SET_USER,
