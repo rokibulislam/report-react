@@ -35,19 +35,19 @@ const PasswordChanage = () => {
                 <h5 className="card-title mb-3"> { t('Change Password') } </h5>
 
                 <div className="form-group">
-                    <label for="currentPassword"> { t('Current password') } </label>
+                    <label htmlFor="currentPassword"> { t('Current password') } </label>
                     <input type="password" className="form-control" id="currentPassword"/>
                 </div>
 
 
                 <div className="form-group">
-                    <label for="newPassword"> { t('New password') } </label>
+                    <label htmlFor="newPassword"> { t('New password') } </label>
                     <input type="password" className="form-control" id="newPassword"/>
                 </div>
 
 
                 <div className="form-group">
-                    <label for="confirmNewPassword"> { t('Confirm new password') } </label>
+                    <label htmlFor="confirmNewPassword"> { t('Confirm new password') } </label>
                     <input type="password" className="form-control" id="confirmNewPassword"/>
                 </div>
 

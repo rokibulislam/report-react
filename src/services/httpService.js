@@ -15,11 +15,10 @@ import { toast } from 'react-toastify'
 //     return Promise.reject(error);
 // });
 
-axios.defaults.baseURL = 'http://localhost:8086/';
+axios.defaults.baseURL = 'http://localhost:8085/';
 axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
-const setAuthToken = token => axios.defaults.headers.common["x-access-token"] = token;
+const setAuthToken = token => axios.defaults.headers.common["access-token"] = token;
 
 
 export default {

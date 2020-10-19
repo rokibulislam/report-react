@@ -12,15 +12,15 @@ const AccountTable = (props) => {
                 { 
                     props.apiAccount.map( account => {
                         return (
-                            <div className="card card--account">
+                            <div className="card card--account" key={account._id}>
                                 <div className="card--account__info">
                                     <div className="card--account__name">
                                         <div className="label"> { t('Account Name') }</div>
-                                        <div className="text">Soly group</div>
+                                        <div className="text"> { account.name } </div>
                                     </div>
                                     <div className="card--account__expdate">
                                         <div className="label"> { t('Expiration Date') }</div>
-                                        <div className="date">2021-01-01</div>
+                                        <div className="date"> {account.expirationDate} </div>
                                     </div>
                                 </div>
     
@@ -36,7 +36,7 @@ const AccountTable = (props) => {
                                     <div className="divider"></div>
     
                                     <div className="card--account__delete">
-                                        <button onClick={ () => props.deleteAccount(account) } style={{background: "None",border: "None"}}>
+                                        <button onClick={ () => props.deleteAccount(account._id,account) } style={{background: "None",border: "None"}}>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 3.8H2.55556M2.55556 3.8H15M2.55556 3.8V13.6C2.55556 13.9713 2.71944 14.3274 3.01117 14.5899C3.30289 14.8525 3.69855 15 4.11111 15H11.8889C12.3014 15 12.6971 14.8525 12.9888 14.5899C13.2806 14.3274 13.4444 13.9713 13.4444 13.6V3.8H2.55556ZM4.88889 3.8V2.4C4.88889 2.0287 5.05278 1.6726 5.3445 1.41005C5.63622 1.1475 6.03189 1 6.44444 1H9.55556C9.96811 1 10.3638 1.1475 10.6555 1.41005C10.9472 1.6726 11.1111 2.0287 11.1111 2.4V3.8M6.44444 7.3V11.5M9.55556 7.3V11.5" stroke="#BCC4D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>

@@ -21,7 +21,7 @@ const EditAccountForm = (props) => {
       }
 
     const updateAccount = () => {
-        props.updateAccount(apiAccount.id, apiAccount)
+        props.updateAccount(apiAccount._id, apiAccount)
     }
 
     return ( 

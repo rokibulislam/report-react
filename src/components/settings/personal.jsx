@@ -45,29 +45,29 @@ const Personal = (props) => {
                         <div className="card--profile__body">
                             <div className="form-row">
                                 <div className="form-group col">
-                                    <label for="firstName"> { t('First Name') } </label>
+                                    <label htmlFor="firstName"> { t('First Name') } </label>
                                     
                                     <input type="text" className="form-control" id="firstName" value={props.user.firstName }/>
                                 </div>
 
                                 <div className="form-group col">
-                                    <label for="lastName"> { t('Last Name') } </label>
+                                    <label htmlFor="lastName"> { t('Last Name') } </label>
                                     <input type="text" className="form-control" id="lastName" value={props.user.lastName }/>
                                 </div>
                             </div>
 
                             <div className="form-group">
-                                <label for="email"> { t('Email address') } </label>
+                                <label htmlFor="email"> { t('Email address') } </label>
                                 <input type="email" className="form-control" id="email" value={props.user.email }/>
                             </div>
 
                             <div className="form-group">
-                                <label for="phoneNo"> { t('Phone No') } </label>
+                                <label htmlFor="phoneNo"> { t('Phone No') } </label>
                                 <input type="tel" className="form-control" id="phoneNo" value={props.user.phoneNo }/>
                             </div>
 
                             <div className="form-group">
-                                <label for="companyName"> { t('Company Name') } </label>
+                                <label htmlFor="companyName"> { t('Company Name') } </label>
                                 <input type="text" className="form-control" id="companyName" value={props.user.companyName }/>
                             </div>
 

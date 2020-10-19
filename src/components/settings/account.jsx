@@ -8,13 +8,6 @@ import http from '../../services/httpService'
 
 const Account = (props) => {
     // const { apiAccount } = props.apiAccount;
-
-    const apiaccountData = [
-		{ _id: 1, name: 'Tania', consumerId: 'floppydiskette', employeeId: 'rok', expirationDate: "2-4-20" },
-		{ _id: 2, name: 'Craig', consumerId: 'siliconeidolon', employeeId: 'rok',expirationDate: "2-4-20" },
-		{ _id: 3, name: 'Ben', consumerId: 'benisphere', employeeId: 'rok', expirationDate: "2-4-20" }
-	]
-
     const initialFormState = {
         _id: null,
         'name': "",
@@ -23,32 +16,55 @@ const Account = (props) => {
         "expirationDate": ""
     }
 
-    const [ apiAccount, setApiAccount ] = useState(apiaccountData)
+    // const [ apiAccount, setApiAccount ] = useState(apiaccountData)
+    const [ apiAccount, setApiAccount ] = useState([])
     const [ currentApiAccount, setCurrentApiAccount ] = useState(initialFormState)
     const [ editing, setEditing ] = useState(false)
 
     useEffect( () => {
-        http.get('/api-account')  .then(function (response) {
-            // handle success
-            console.log(response);
-        })
-        .catch(function (error) {
-            // handle error
+        fetchApiAccount();
+    }, ['apiAccount'])    
+
+    const fetchApiAccount = () => {
+        http.get('/api-account').then(function (response) {
+            setApiAccount(response.data)
+        }).catch(function (error) {
             console.log(error);
         })
-    })    
+    } 
 
+    const addAccount = async account => {
+        const data = {
+            "name": account.name,
+            "consumerId": account.consumerId,
+            "employeeId": account.employeeId,
+            "expirationDate": account.expirationDate
+        }
 
-    const addAccount = account => {
-
+        await http.post('/api-account', data )
+        .then( (response) => {
+            setApiAccount( accounts => [...accounts, response.data ] );
+        }).catch( (error) => {
+            console.log(error);
+        })
     }
 
-    const updateAccount = (id, account) => {
+    const updateAccount = async (id, account) => {
+        await http.put(`/api-account/${id}`,account).then( (response) => {
+            const newAccounts = apiAccount.filter( item => item._id != id );
+            setApiAccount([...newAccounts, response.data ] );
+        }).catch( (error) => {
+
+        })
         setEditing(false)
     }
 
-    const deleteAccount = data => {
-        
+    const deleteAccount = (id, account) => {
+        http.delete(`/api-account/${id}`).then( (response) => {
+            fetchApiAccount();
+        }).catch( (error) => {
+
+        })
     }
 
     const editRow = account => {
@@ -79,7 +95,7 @@ const Account = (props) => {
                         </>
                     ) : ( 
                         <>
-                            <AddAccountForm/>
+                            <AddAccountForm addAccount={addAccount}/>
                         </>
                     )}
                 </div>

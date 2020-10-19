@@ -17,7 +17,7 @@ const SalesRevenue = (props) => {
                     <th scope="col" className="month-name">Apr</th>
                     <th scope="col" className="month-name">May</th>
                     <th scope="col" className="month-name">2020 up to and incl. 05-18</th>
-                    <th scope="col" className="month-name py-1" colspan="2">
+                    <th scope="col" className="month-name py-1" colSpan="2">
                         <div className="">2019 up to and incl. 05-18</div>
                         <div className="d-flex flex-wrap border-top mt-1 pt-1">
                             <span className="w-50"> { t('Period') } </span>
@@ -28,10 +28,10 @@ const SalesRevenue = (props) => {
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row" colspan="10"> { t('Operating Revenues') }</th>
+                    <th scope="row" colSpan="10"> { t('Operating Revenues') }</th>
                 </tr>
                 <tr>
-                    <th scope="row" className="color-green" colspan="8"> { t('Sales revenue') }</th>
+                    <th scope="row" className="color-green" colSpan="8"> { t('Sales revenue') }</th>
                 </tr>
                 <tr>
                     <th scope="row">3000 Salgsinntekt, avgiftspliktig </th>
@@ -67,7 +67,7 @@ const SalesRevenue = (props) => {
                     <td>301,262.93</td>
                 </tr>
                 <tr>
-                    <th scope="row" className="color-green" colspan="12"> { t('Other operating revenues') }</th>
+                    <th scope="row" className="color-green" colSpan="12"> { t('Other operating revenues') }</th>
                 </tr>
                 <tr>
                     <th scope="row">3805 Salgssum anleggsmidler, avgiftsfri</th>
